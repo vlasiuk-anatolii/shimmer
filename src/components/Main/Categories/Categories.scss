@@ -1,0 +1,73 @@
+.category {
+  max-width: 1136px;
+  margin: auto;
+  margin-bottom: 80px;
+  padding: 0 20px;
+
+  &__title {
+    font-family: "Mont-Bold", sans-serif;
+    margin-bottom: 32px;
+  }
+
+  &__box-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__box-category {
+    margin-right: 16px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__icon-button {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__image {
+    width: 268px;
+    height: 268px;
+    background-image: url(../../../images/category/oil.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media (min-width: 768px) {
+      width: 350px;
+      height: 350px;
+    }
+
+    &--gels {
+      background-image: url(../../../images/category/gel.jpg);
+    }
+
+    &--scrubs {
+      background-image: url(../../../images/category/scrub.jpg);
+    }
+    transition-duration: 0.5s;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__subtitle {
+    font-family: "Mont-Bold", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    margin-top: 24px;
+    color: #313237;
+  }
+
+  &__counter {
+    font-family: "Mont-Bold", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    margin-top: 4px;
+    color: #89939a;
+    margin-bottom: 10px;
+  }
+}

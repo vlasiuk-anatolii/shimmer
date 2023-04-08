@@ -1,0 +1,33 @@
+.features{
+  max-width: 1136px;
+  margin: 0 auto;
+  
+  &__title {
+    font-family: "Mont-Bold", sans-serif;
+    margin-bottom: 20px;
+    padding-left: 20px;
+  }
+  &__box-card {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  &__card {
+    font-family: "Mont-SemiBold", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    box-sizing: border-box;
+    border: 1px solid #e2e6e9;
+    padding: 10px 24px;
+    max-width: 270px;
+    transition-duration: 0.5s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

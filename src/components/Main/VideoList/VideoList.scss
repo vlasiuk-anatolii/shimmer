@@ -1,0 +1,31 @@
+
+.video-list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px ;
+
+  &__title {
+    font-family: "Mont-Bold", sans-serif;
+    flex-grow: 2;
+    padding-left: 10px;
+    margin-bottom: 32px;
+  }
+
+  &__button {
+    display: block;
+    width: 176px;
+    height: 40px;
+    background-color: #313237;
+    margin: 0 auto;
+    font-family: "Mont-Regular", sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 40px;
+    color: #fff;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

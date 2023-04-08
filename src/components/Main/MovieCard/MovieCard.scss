@@ -1,0 +1,13 @@
+.video-card {
+  width: 249px;
+  height: 445px;
+  border: 1px solid #e2e6e9;
+  padding: 10px;
+
+  &__video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+  }
+}

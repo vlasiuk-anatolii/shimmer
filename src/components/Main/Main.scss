@@ -1,0 +1,46 @@
+.main {
+  position: relative;
+  max-width: 1136px;
+  margin: 0 auto;
+
+  &__small-bars {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+  
+  &__main-title {
+    position: absolute;
+    z-index: 2;
+    top: -30px;
+    line-height: 30px;
+    font-family: "Mont-Bold", sans-serif;
+    font-size: 18px;
+    padding-left: 20px;
+    color: #000;
+    -webkit-text-stroke: 1px #000;
+    @media (min-width: 768px) {
+      font-size: 26px;
+      width: 50%;
+    }
+  }
+
+  &__main-title-filled {
+    font-size: 26px;
+    color: #fff;
+    @media (min-width: 768px) {
+      font-size: 36px;
+    }
+  }
+
+  &__bar {
+    margin-right: 14px;
+    width: 14px;
+    height: 4px;
+    background-color: #e2e6e9;
+
+    &--isactive {
+      background-color: #313237;
+    }
+  }
+}
