@@ -1,11 +1,10 @@
-# Phone catalog
+# Shimmer
 
 ## Description
 App is adaptive for all devices.
-Design was implemented on base following [Design](https://www.figma.com/file/uEetgWenSRxk9jgiym6Yzp/Phone-catalog-redesign?node-id=1%3A2).
 
-- Folders `pages`, `components`, `images`, `api`, `const` and  `store` were created for better structuring my app
-- `Scss` files were added for every component
+- Folders `pages`, `components`, `images`, `api`, `const`, `video` and `store` were created for better structuring my app
+- `Scss` files were added for each component
 
 ### App
 1. Routing was implemented at App component
@@ -20,32 +19,29 @@ Design was implemented on base following [Design](https://www.figma.com/file/uEe
 ### Home page
 1. `HomePage` is available at `/` 
 1. `HomePage` contains  `Header `, `Main` and `Footer`
-    -  `Main` includes  `TopBanners`, `HotPrices`, `ShopCategory`, `NewModels`
-1. Products are fetched from API
-    -  Each product has a `type`: `phone`, `tablet` or `accessory`
+    -  `Main` includes  `TopBanners`, `HotPrices`, `Categories`, `NewModels`
+1. Products are fetched from json file 'products.json'
+    -  Each product has a `type`: `oil`, `gel` or `scrub`
     - `price` is given before `discount`
     - `discount` is give in percents `%`
-    - `age` is used to sort by `Newest`
     - `id` is required to fetch product details
 1. `Hot prices` block was implemented like 'carousel' of product`s cards
     -  All the filtering and sorting are doing on client side
     - `Card` component is used everywhere where it is needs
     -  Was added ability to use `<` and `>` buttons to scroll products.
 1. Block `NewModels` and `MayLike` also are using 'carousel' such as in `Hot prices` block
-1. Was added `ShopCategory` block with the links to `/phones`, `/tablets` and `/accessories`. 
+1. Was added `Categories` block with the links to `/oils`, `/gels` and `/scrubs`. 
 
-### Phones page
-1. Was created `PhonesPage` available at `/phones` with a `<h1>` title `Mobile phones`
-    - Was implemented `getPhones` API call fetching the products with the `type`: `phone`
-1. Was created `ProductsList` which can showing all the `phones`
-1. Was implemented a `Loader` to show it while waiting for the data from server
-1. Was added ability to sort the products by `age` (`Newest`, `value="age"`), `name` (`Alphabetically`, `value="name"`) and `price` (`Cheapest`, `value="price"`) using `<select>` element.
+### Oils page
+1. Was created `OilsPage` available at `/oils` with a `<h1>` title `Oil`
+1. Was created `ProductsList` which can showing all the `oils`
+1. Was added ability to sort the products by `name` (`Alphabetically`, `value="name"`) and `price` (`Cheapest`, `value="price"`) using `<select>` element.
 1. `Pagination` was created using for it's components container and `Items on page` using `<select>` element with `4`, `8`, `16` and `all` options. 
     - all the pagination elements are hidden if there are a few items (less than 1 smallest page size)
 
-### Tablets and accessories
-1. Was created `TabletsPage` page with `<h1>` title `Tablets` available at `/tablets` working the same way as `PhonesPage`
-1. Was created `AccessoriesPage` with `<h1>` title `Accessories` page available at `/accessories` working the same way as `PhonesPage`
+### Gels and Scrubs pages
+1. Was created `GelPage` page with `<h1>` title `Gel` available at `/gels` working the same way as `OilsPage`
+1. Was created `ScrubssPage` with `<h1>` title `Scrub` page available at `/scrubs` working the same way as `OilsPage`
     - Was implemented `NotFound` component displayed if there are no products available containing text `<Category name> not found`
 
 ### Product details page
@@ -71,13 +67,6 @@ Design was implemented on base following [Design](https://www.figma.com/file/uEe
 1. Was added ability to add/remove favorite products by pressing a hart.
 1. The favorites count is showing near the `Favorites` icon in the header
 
-### Search
-1. `Search` component was added with an input into the `<header>` to filter products
-1. It has ability to show only at `/phones`, `/tablets` and `/accessories` with an appropriate text
-1. The `x` sign appears when the query is not empty and clears the search
-1. It works with pagination and sorting
-1. `NoSearchResults` component was implemented and show it when there are no products matching the query
-
 ## Local development
 * VS Code
 * ESlint
@@ -88,12 +77,9 @@ Design was implemented on base following [Design](https://www.figma.com/file/uEe
 - react-router-dom
 - typescript
 - react-dom
-- fetch
 - JS
-- API
 - HTML
 - SASS
-- AsyncThunk
 - redux-toolkit
 - material ui
 - Node v14.18.2 and higher
