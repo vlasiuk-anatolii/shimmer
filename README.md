@@ -1,5 +1,7 @@
 # Shimmer
 
+[Demo](https://vlasiuk-anatolii.github.io/shimmer/)
+
 ## Description
 App is adaptive for all devices.
 
