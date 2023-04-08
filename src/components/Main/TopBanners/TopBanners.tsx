@@ -11,7 +11,7 @@ export const TopBanners: React.FC<Props> = ({ setIsNumberBanner }) => {
   const [position, setPosition] = useState(0);
   const [disablePrev, setdisablePrev] = useState(false);
   const [disableNext, setdisableNext] = useState(false);
-  const [widthOneBanner, setWidthOneBanner] = useState(window.innerWidth);
+  const [widthOneBanner, setWidthOneBanner] = useState(640);
   let numberBanner: number;
 
   numberBanner = position / widthOneBanner;
@@ -40,6 +40,11 @@ export const TopBanners: React.FC<Props> = ({ setIsNumberBanner }) => {
       setdisablePrev(true);
     }
   };
+  useEffect(() => {
+    if (boxlistRef.current) {
+        setWidthOneBanner(+boxlistRef.current?.clientWidth);
+      }
+  }, []);
 
   useEffect(() => {
     window.addEventListener('resize', () => {

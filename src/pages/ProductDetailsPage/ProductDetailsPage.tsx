@@ -91,8 +91,8 @@ export const ProductDetailsPage = () => {
 
   return (
     <>
-    <div className="sticky">
-      <Header />
+      <div className="sticky">
+        <Header />
       </div>
       <div className="product-details">
         <div className="product-details__container">
@@ -199,7 +199,7 @@ export const ProductDetailsPage = () => {
               </div>
             </div>
             <div className="product-details__box-right">
-              <div className="product-details__box-price-phone">
+              <div className="product-details__box-price-product">
                 <h2 className="product-details__current-price">
                   $
                   {currentPrice}
@@ -246,7 +246,7 @@ export const ProductDetailsPage = () => {
                 </IconButton>
               </div>
               <div className="product-details__box-info">
-                <div className="product-details__screen-name">
+                <div className="product-details__color-name">
                   <p className="product-details__text-features">Color</p>
                   <p className="product-details__value-features">
                     {currentProduct?.color}
@@ -326,7 +326,7 @@ export const ProductDetailsPage = () => {
                     Some quality
                   </p>
                   <p className="product-details__value-tech-specs">
-                    {['value1', 'value2', 'value3','value4'].map(item => (
+                    {['value1', 'value2', 'value3', 'value4'].map(item => (
                       <div key={item}>{item}</div>
                     ))}
                   </p>

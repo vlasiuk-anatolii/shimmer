@@ -4,7 +4,10 @@
   padding: 0 20px;
   
   &__may-like-wrapper {
+    max-width: 1136px;
+    margin: 0 auto;
     padding: 0 20px;
+    box-sizing: border-box;
   }
 
   &__link {
@@ -18,9 +21,8 @@
   }
 
   &__container {
-    max-width: 1150px;
+    max-width: 1136px;
     margin: auto;
-    
   }
 
   &__box-img-home-arrow {
@@ -183,7 +185,7 @@
     margin-bottom: 60px;
   }
 
-  &__box-price-phone {
+  &__box-price-product {
     display: flex;
     margin-bottom: 16px;
   }
@@ -214,11 +216,15 @@
   }
 
   &__box-info {
-    width: 320px;
+    width: 280px;
     margin-bottom: 100px;
+    @media (min-width: 768px) {
+      width: 320px;
+      margin-bottom: 100px;
+    }
   }
 
-  &__screen-name,
+  &__color-name,
   &__capacity-name,
   &__type-name {
     display: flex;
@@ -250,9 +256,12 @@
 
   &__box-buttons {
     display: flex;
-    width: 320px;
+    width: 280px;
     height: 48px;
     margin-bottom: 32px;
+    @media (min-width: 768px) {
+      width: 320px;
+    }
   }
 
   &__add-to-cart {
@@ -346,9 +355,13 @@
 
 .sticky {
   position: fixed;
+  max-width: 1440px;
+  margin: 0 auto;
   top: 0px;
-  left: 0;
   width: 100%;
   z-index: 10;
+  @media (min-width: 768px) {
+    width: 1440px;
+  }
 }
 

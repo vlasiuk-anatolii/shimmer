@@ -6,7 +6,6 @@ import { useNavigate } from 'react-router-dom';
 import './Header.scss';
 import { Logo } from '../Logo/Logo';
 import { Nav } from '../Nav/Nav';
-import { Search } from '../Search/Search';
 
 import {
   getFavoritesSelector,
@@ -38,7 +37,6 @@ export const Header = () => {
             <MobileNav wherePlaced={'menu'} />
           </div>
           <div className="header__container-right">
-            <Search />
             <IconButton
               size="small"
               sx={{ padding: 0 }}
